@@ -26,7 +26,6 @@ const todoReducer = (state = initialState, action) => {
         ),
       };
 
-
     case MARK_ALL_COMPLETED:
       return {
         todos: state.todos.map((todo) => ({ ...todo, completed: true })),
