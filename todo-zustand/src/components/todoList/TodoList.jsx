@@ -3,10 +3,11 @@ import useTodoStore from '../../store/todoStore'
 import TodoItem from '../todoItem/TodoItem'; //Para renderizar cada todo
 
 const TodoList = () => {
-  const todos = useTodoStore(state => state.todos) //Extraer los todos del store
+  const Todos = useTodoStore(state => state.todos) //Extraer los todos del store
+  
   return (
     <ul>
-      {todos.map(todo => (
+      {Todos.map(todo => (
         <TodoItem key={todo.id} {...todo} />) //Renderizar cada todo
       )}
     </ul>
