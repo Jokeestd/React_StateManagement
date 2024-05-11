@@ -1,39 +1,26 @@
+// actions.js
+import {
+  ADD_TODO,
+  MARK_TODO,
+  REMOVE_TODO,
+  MARK_ALL_COMPLETED,
+} from './actionTypes';
 
-export const addTodo = (todo) => ({
-    type: ADD_TODO,
-    payload: {todo}
-  });
+export const addTodo = (text) => ({
+  type: ADD_TODO,
+  payload: { text },
+});
 
-export const updateSearch = (search) => ({
-    type: UPDATE_SEARCH,
-    payload: {search}
-  });
+export const markTodo = (id) => ({
+  type: MARK_TODO,
+  payload: { id },
+});
 
-export const filterTodos = (filter) => ({
-    type: FILTER_TODOS,
-    payload: {filter}
-  });
+export const removeTodo = (id) => ({
+  type: REMOVE_TODO,
+  payload: { id },
+});
 
-  export const markCompleted = (id) => ({
-    type: MARK_COMPLETED,
-    payload: {id}
-  });
-
-  export const markIncomplete = (id) => ({
-    type: MARK_INCOMPLETE,
-    payload: {id}
-  });
-
-  export const toggleTodo = (id) => ({
-    type: TOGGLE_TODO,
-    payload: {id}
-  });
-  
-  export const removeTodo = (id) => ({
-    type: REMOVE_TODO,
-    payload: {id}
-  });
-
-  export const markAllCompleted = () => ({
-    type: MARK_ALL_COMPLETED
-  });
+export const markAllCompleted = () => ({
+  type: MARK_ALL_COMPLETED,
+});
